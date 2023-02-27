@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ibrahim.wingstestcandidate.data.model.Product
 import com.ibrahim.wingstestcandidate.databinding.ActivityProductListBinding
 import com.ibrahim.wingstestcandidate.presentation.adapter.ProductAdapter
+import com.ibrahim.wingstestcandidate.presentation.ui.checkout.CheckoutActivity
 import com.ibrahim.wingstestcandidate.presentation.ui.product_detail.ProductDetailActivity
 
 class ProductListActivity : AppCompatActivity() {
@@ -32,6 +33,15 @@ class ProductListActivity : AppCompatActivity() {
         setContentView(binding.root)
         initRecyclerView()
         initObserver()
+        initAction()
+    }
+
+    private fun initAction() {
+        binding.apply {
+            btnCheckout.setOnClickListener {
+                CheckoutActivity.start(this@ProductListActivity)
+            }
+        }
     }
 
     private fun dataDummy(): List<Product> {

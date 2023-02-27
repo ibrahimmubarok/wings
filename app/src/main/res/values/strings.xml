@@ -9,4 +9,8 @@
     <string name="label_price">Price</string>
     <string name="label_price_unit">Price Unit</string>
     <string name="label_dimension">Dimension</string>
+    <string name="label_sub_total">Sub Total :</string>
+    <string name="label_pcs">Pcs</string>
+    <string name="label_total">Total :</string>
+    <string name="label_confirm">Confirm</string>
 </resources>

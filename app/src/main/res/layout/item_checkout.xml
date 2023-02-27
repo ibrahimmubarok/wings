@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_16">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civProduct"
+        android:layout_width="@dimen/dimen_96"
+        android:layout_height="@dimen/dimen_96"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProductName"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/civProduct"
+        app:layout_constraintTop_toTopOf="@id/civProduct"
+        tools:text="So Klin Pewangi" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPcs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_4"
+        android:padding="@dimen/dimen_8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintStart_toStartOf="@id/tvProductName"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName"
+        tools:text="10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelPcs"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_4"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:text="@string/label_pcs"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toBottomOf="@id/tvPcs"
+        app:layout_constraintEnd_toEndOf="@id/tvProductName"
+        app:layout_constraintStart_toEndOf="@id/tvPcs"
+        app:layout_constraintTop_toTopOf="@id/tvPcs" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelSubTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_4"
+        android:padding="@dimen/dimen_8"
+        android:text="@string/label_sub_total"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintStart_toStartOf="@id/tvProductName"
+        app:layout_constraintTop_toBottomOf="@id/tvPcs" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSubTotal"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_4"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toBottomOf="@id/tvLabelSubTotal"
+        app:layout_constraintEnd_toEndOf="@id/tvProductName"
+        app:layout_constraintStart_toEndOf="@id/tvLabelSubTotal"
+        app:layout_constraintTop_toTopOf="@id/tvLabelSubTotal"
+        tools:text="Rp. 27.000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
