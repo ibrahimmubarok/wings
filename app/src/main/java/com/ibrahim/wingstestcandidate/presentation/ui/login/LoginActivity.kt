@@ -1,10 +1,11 @@
-package com.ibrahim.wingstestcandidate.presentation.login
+package com.ibrahim.wingstestcandidate.presentation.ui.login
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ibrahim.wingstestcandidate.R
 import com.ibrahim.wingstestcandidate.databinding.ActivityLoginBinding
+import com.ibrahim.wingstestcandidate.presentation.ui.product_list.ProductListActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -20,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
         binding.apply {
             btnLogin.setOnClickListener {
                 if (isLoggedIn()) {
-                    // TODO : navigate product list page
+                    ProductListActivity.start(this@LoginActivity)
                 } else {
                     Toast.makeText(
                         this@LoginActivity,

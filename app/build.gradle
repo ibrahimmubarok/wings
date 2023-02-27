@@ -48,6 +48,7 @@ dependencies {
     implementation Dependencies.koinAndroid
     implementation Dependencies.lifecycleViewModelKtx
     implementation Dependencies.lifecycleLiveDataKtx
+    implementation Dependencies.circleImageView
 
     testImplementation Dependencies.junit
     androidTestImplementation Dependencies.androidJunit

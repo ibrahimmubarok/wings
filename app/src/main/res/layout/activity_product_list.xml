@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.product_list.ProductListActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnCheckout"
+        tools:listitem="@layout/item_product" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/dimen_32"
+        android:layout_marginVertical="@dimen/dimen_16"
+        android:minHeight="@dimen/dimen_60"
+        android:text="@string/label_checkout"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/dimen_32" />
+
+</RelativeLayout>

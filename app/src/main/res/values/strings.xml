@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">WingsTestCandidate</string>
-    <string name="label_login">LOGIN</string>
+    <string name="label_login">Login</string>
     <string name="hint_password">Password</string>
     <string name="hint_username">Username</string>
     <string name="error_login_not_success">Login not success!</string>
+    <string name="label_checkout">Checkout</string>
+    <string name="label_buy">Buy</string>
 </resources>
