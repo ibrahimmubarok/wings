@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ibrahim.wingstestcandidate.data.model.Product
 import com.ibrahim.wingstestcandidate.databinding.ActivityProductListBinding
 import com.ibrahim.wingstestcandidate.presentation.adapter.ProductAdapter
+import com.ibrahim.wingstestcandidate.presentation.ui.product_detail.ProductDetailActivity
 
 class ProductListActivity : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class ProductListActivity : AppCompatActivity() {
 
     private val productAdapter: ProductAdapter by lazy {
         ProductAdapter {
-            // TODO: Navigate to detail product page
+            ProductDetailActivity.start(this@ProductListActivity)
         }
     }
 

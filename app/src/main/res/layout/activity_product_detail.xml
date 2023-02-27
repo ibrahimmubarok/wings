@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.product_detail.ProductDetailActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civProduct"
+        android:layout_width="@dimen/dimen_120"
+        android:layout_height="@dimen/dimen_120"
+        android:layout_marginTop="@dimen/dimen_60"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProductName"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/civProduct"
+        tools:text="So Klin Liquid" />
+
+    <TableLayout
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_24"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName">
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelPrice"
+                android:gravity="start"
+                android:padding="@dimen/dimen_4"
+                android:text="@string/label_price"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                android:gravity="end"
+                android:padding="@dimen/dimen_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                tools:text="Rp. 18.000,-" />
+        </TableRow>
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelDimension"
+                android:gravity="start"
+                android:padding="@dimen/dimen_4"
+                android:text="@string/label_dimension"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDimension"
+                android:gravity="end"
+                android:padding="@dimen/dimen_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                tools:text="13 cm X 10 cm" />
+        </TableRow>
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelPriceUnit"
+                android:gravity="start"
+                android:padding="@dimen/dimen_4"
+                android:text="@string/label_price_unit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPriceUnit"
+                android:gravity="end"
+                android:padding="@dimen/dimen_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                tools:text="PCS" />
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBuy"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_32"
+        android:layout_marginBottom="@dimen/dimen_24"
+        android:minHeight="@dimen/dimen_60"
+        android:text="@string/label_buy"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/dimen_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

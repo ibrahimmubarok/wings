@@ -16,6 +16,9 @@
         android:theme="@style/Theme.WingsTestCandidate"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.ui.product_detail.ProductDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.ui.product_list.ProductListActivity"
             android:exported="false" />
         <activity

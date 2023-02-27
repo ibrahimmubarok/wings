@@ -6,4 +6,7 @@
     <string name="error_login_not_success">Login not success!</string>
     <string name="label_checkout">Checkout</string>
     <string name="label_buy">Buy</string>
+    <string name="label_price">Price</string>
+    <string name="label_price_unit">Price Unit</string>
+    <string name="label_dimension">Dimension</string>
 </resources>
