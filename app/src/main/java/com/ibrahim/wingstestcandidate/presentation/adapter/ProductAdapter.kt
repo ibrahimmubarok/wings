@@ -5,15 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ibrahim.wingstestcandidate.R
-import com.ibrahim.wingstestcandidate.data.model.Product
+import com.ibrahim.wingstestcandidate.data.model.ProductsResponse
 import com.ibrahim.wingstestcandidate.databinding.ItemProductBinding
 
-class ProductAdapter(val onClicked: (Product) -> Unit) :
+class ProductAdapter(val onClicked: (ProductsResponse) -> Unit) :
     RecyclerView.Adapter<ProductAdapter.ProductAdapterViewHolder>() {
 
-    private val items = mutableListOf<Product>()
+    private val items = mutableListOf<ProductsResponse>()
 
-    fun setData(items: List<Product>) {
+    fun setData(items: List<ProductsResponse>) {
         this.items.clear()
         this.items.addAll(items)
         notifyDataSetChanged()
@@ -21,7 +21,7 @@ class ProductAdapter(val onClicked: (Product) -> Unit) :
 
     inner class ProductAdapterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemProductBinding.bind(view)
-        fun bind(item: Product) {
+        fun bind(item: ProductsResponse) {
             binding.apply {
                 tvProductName.text = item.productName
                 tvPrice.text = item.price.toString()

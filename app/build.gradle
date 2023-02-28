@@ -50,6 +50,10 @@ dependencies {
     implementation Dependencies.lifecycleLiveDataKtx
     implementation Dependencies.circleImageView
 
+    implementation Dependencies.okHttpLogging
+    implementation Dependencies.retrofit2
+    implementation Dependencies.retrofitConverterGson
+
     testImplementation Dependencies.junit
     androidTestImplementation Dependencies.androidJunit
     androidTestImplementation Dependencies.espressoCore

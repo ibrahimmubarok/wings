@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ibrahim.wingstestcandidate.databinding.ActivityCheckoutBinding
+import com.ibrahim.wingstestcandidate.presentation.viewmodel.MainViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CheckoutActivity : AppCompatActivity() {
 
@@ -15,6 +17,8 @@ class CheckoutActivity : AppCompatActivity() {
     }
 
     private lateinit var binding: ActivityCheckoutBinding
+
+    private val mainViewModel: MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
