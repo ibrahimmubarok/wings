@@ -49,6 +49,8 @@ dependencies {
     implementation Dependencies.lifecycleViewModelKtx
     implementation Dependencies.lifecycleLiveDataKtx
     implementation Dependencies.circleImageView
+    implementation Dependencies.roomDatabaseKtx
+    kapt Dependencies.roomCompiler
 
     testImplementation Dependencies.junit
     androidTestImplementation Dependencies.androidJunit

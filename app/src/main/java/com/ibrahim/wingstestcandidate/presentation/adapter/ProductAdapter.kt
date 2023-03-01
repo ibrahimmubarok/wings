@@ -8,8 +8,10 @@ import com.ibrahim.wingstestcandidate.R
 import com.ibrahim.wingstestcandidate.data.model.Product
 import com.ibrahim.wingstestcandidate.databinding.ItemProductBinding
 
-class ProductAdapter(val onClicked: (Product) -> Unit) :
-    RecyclerView.Adapter<ProductAdapter.ProductAdapterViewHolder>() {
+class ProductAdapter(
+    val onClickedToDetailPage: (Product) -> Unit,
+    val onClickedBuyButton: (Product) -> Unit
+) : RecyclerView.Adapter<ProductAdapter.ProductAdapterViewHolder>() {
 
     private val items = mutableListOf<Product>()
 
@@ -24,9 +26,12 @@ class ProductAdapter(val onClicked: (Product) -> Unit) :
         fun bind(item: Product) {
             binding.apply {
                 tvProductName.text = item.productName
-                tvPrice.text = item.price.toString()
+                tvPrice.text = "Rp ${item.price.toInt()}"
                 btnBuy.setOnClickListener {
-                    onClicked.invoke(item)
+                    onClickedBuyButton.invoke(item)
+                }
+                root.setOnClickListener {
+                    onClickedToDetailPage.invoke(item)
                 }
             }
         }
